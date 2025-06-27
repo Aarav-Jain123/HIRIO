@@ -54,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'mainapp.middleware.StaffRequiredMiddleware', 
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

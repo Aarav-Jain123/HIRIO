@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %} {% block content %}
 <form method="post">
   <h1 style='text-align: center'>HIRIO</h1>
-  <p style='text-align: center'>Thank you for considering for your environment</p>
+  <p style='text-align: center'>Welcome back!</p>
   <p>*Your username is your email*</p>
   {% csrf_token %}{{form|crispy}}
   <p>Don't have an account? Create one <a href="/signup">Here</a>!</p>
