@@ -10,4 +10,5 @@ urlpatterns = [
     # path('quiz/', quiz, name='Quiz'),
     # path('logout/', logout_page, name='Logout'),
     # path('fact-abt-water/', fact_abt_water, name='Fact about water'),
+    path('landing/', landing_page, name='Landing page')
 ]
