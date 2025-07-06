@@ -1,0 +1,429 @@
+{% extends './base.html' %} {% block title %}Welcome{% endblock %} {% block customData %}
+<meta name="author" content="BrilliantMinds - Vultr Track" />
+<meta name="generator" content="Astro v5.9.2" />
+<link
+  rel="canonical"
+  href="https://getbootstrap.com/docs/5.3/examples/product/"
+/>
+<script src="./Product example · Bootstrap v5.3_files/color-modes.js.download"></script>
+<link
+  href="./Product example · Bootstrap v5.3_files/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+/>
+<meta name="theme-color" content="#2e2d2d" />
+<link
+  href="./Product example · Bootstrap v5.3_files/product.css"
+  rel="stylesheet"
+/>
+{% endblock %} 
+{% block content %}
+<header>
+  <nav
+    class="navbar navbar-expand-md bg-dark sticky-top border-bottom"
+    data-bs-theme="dark"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        {% load static %}
+        <img
+          src="{% static 'favicon.ico' %}"
+          alt="HIRIO"
+          width="32"
+          height="32"
+        />
+      </a>
+    </div>
+    <div class="container">
+      <a
+        class="navbar-brand d-md-none"
+        href="#"
+      >
+        <svg class="bi" width="24" height="24" aria-hidden="true">
+          {% load static %}
+          <use xlink:href="{% static 'favicon.ico' %}"></use>
+        </svg>
+        HIRIO
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvas"
+        aria-controls="offcanvas"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvas"
+        aria-labelledby="offcanvasLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">HIRIO</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-grow-1 justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link" href="/" aria-label="HIRIO">
+                <svg class="bi" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#HIRIO"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup/">Get started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login/">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Docs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section>
+  <div
+  class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary"
+>
+  <div class="col-md-6 p-lg-5 mx-auto my-5">
+    <h1 class="display-3 fw-bold">Designed for HR</h1>
+    <h3 class="fw-normal text-muted mb-3">
+      Automated your workflow with HIRIO
+    </h3>
+    <div class="d-flex gap-3 justify-content-center lead fw-normal">
+      <a
+        class="icon-link"
+        href="/signup/"
+      >
+        Get started
+        <svg class="bi" aria-hidden="true">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </a>
+      <a
+        class="icon-link"
+        href="/login/"
+      >
+        Login
+        <svg class="bi" aria-hidden="true">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div
+    class="product-device product-device-2 shadow-sm d-none d-md-block"
+  ></div>
+</div>
+</section>
+
+<section>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div
+      class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+    >
+      <div class="my-3 py-3">
+        <h2 class="display-5">Review CV without ever looking at it</h2>
+        <p class="lead">We know looking at CV could be boring, and frustrating if not made correctly, just upload and see the magic</p>
+      </div>
+      <div
+        class="bg-body-tertiary shadow-sm mx-auto"
+        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+      ></div>
+    </div>
+    <div
+      class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+    >
+      <div class="my-3 p-3">
+        <h2 class="display-5">Make your company policies know themselves</h2>
+        <p class="lead">Just drop your policy URL and ask anything from the ChatPolicy feature, or pass it to a client or an onboarding employee</p>
+      </div>
+      <div
+        class="bg-dark shadow-sm mx-auto"
+        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+      ></div>
+    </div>
+</section>
+  
+<section>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div
+    class="product-device product-device-2 shadow-sm d-none d-md-block"
+  ></div>
+</div>
+</section>
+
+<section>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div
+      class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+    >
+      <div class="my-3 py-3">
+        <h2 class="display-5">Stay updated with laws</h2>
+        <p class="lead">HIRIO will daily provide you the laws of your area so you can stay upto date</p>
+      </div>
+      <div
+        class="bg-body-tertiary shadow-sm mx-auto"
+        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+      ></div>
+    </div>
+    <div
+      class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+    >
+      <div class="my-3 p-3">
+        <h2 class="display-5">Manage employees </h2>
+        <p class="lead">Connect your email and employee list, and HIRIO will know what to do, just prompt</p>
+      </div>
+      <div
+        class="bg-dark shadow-sm mx-auto"
+        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+      ></div>
+    </div>
+  </div>
+</section>
+
+<section>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div
+      class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+    >
+      <div class="my-3 py-3">
+        <h2 class="display-5">List Events</h2>
+        <p class="lead">List and host events at the right time to keep employee motivation higher than everrrrr...</p>
+      </div>
+      <div
+        class="bg-body-tertiary shadow-sm mx-auto"
+        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+      ></div>
+    </div>
+    <div
+      class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+    >
+      <div class="my-3 p-3">
+        <h2 class="display-5">Keep up with deadlines</h2>
+        <p class="lead">With memory tool, HIRIO remembers the deadline given to employees, the meetings and so on...</p>
+      </div>
+      <div
+        class="bg-dark shadow-sm mx-auto"
+        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+      ></div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div
+  class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary"
+>
+  <div class="col-md-6 p-lg-5 mx-auto my-5">
+    <h1 class="display-3 fw-bold">And so much more...</h1>
+    <h3 class="fw-normal text-muted mb-3">
+      Start now!
+    </h3>
+    <div class="d-flex gap-3 justify-content-center lead fw-normal">
+      <a
+        class="icon-link"
+        href="/signup/"
+      >
+        Get started
+        <svg class="bi" aria-hidden="true">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </a>
+      <a
+        class="icon-link"
+        href="/login/"
+      >
+        Login
+        <svg class="bi" aria-hidden="true">
+          <use xlink:href="#chevron-right"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Cool stuff</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Random feature</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Team feature</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Stuff for developers</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Another one</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Last time</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Resource name</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Resource</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Another resource</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Final resource</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Business</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Education</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Government</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Gaming</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Team</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Locations</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Privacy</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-secondary text-decoration-none"
+            href="#"
+            >Terms</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+{% endblock %} 
+{% block customScripts %} {% comment %}
+<script
+  src="./Product example · Bootstrap v5.3_files/bootstrap.bundle.min.js.download"
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+  class="astro-vvvwv3sm"
+></script>
+{% endcomment %} {% endblock %}

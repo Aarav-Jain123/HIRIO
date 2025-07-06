@@ -1,5 +1,6 @@
 {% extends 'main/base.html' %} {% block title %}Login{% endblock %} 
 {% load crispy_forms_tags %} {% block content %}
+<div class="container">
 <form method="post">
   <h1 style='text-align: center'>HIRIO</h1>
   <p style='text-align: center'>Welcome back!</p>
@@ -9,4 +10,5 @@
   <p>Forgot your password? Click <a href="/password_reset">Here</a>!</p>
   <button type="submit" class="btn btn-success">Login</button>
 </form>
+</div>
 {% endblock %}

@@ -8,10 +8,12 @@
     </div>
 {% endfor %}
 {% endif %}
+<div class="container">
 <h1 style='text-align: center'>HIRIO</h1>
 <form method="post">
   {% csrf_token %}{{form|crispy}}
   <p>Have an account? Login <a href="/login">Here</a>!</p>
   <button type="submit" class="btn btn-success">Next</button>
 </form>
+</div>
 {% endblock %}
