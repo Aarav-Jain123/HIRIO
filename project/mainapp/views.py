@@ -13,6 +13,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from .vatVerifier import verify_vat
 from django.shortcuts import get_object_or_404
+from .aiFunctionalities import *
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 
 # Create your views here.
 @login_required(login_url="/landing/")
@@ -126,27 +129,6 @@ def logout_page(request):
     return redirect('/landing/')
 
 
-def delete_user_page(request):
-    auth_data = request.data
-    username_of_user = request.user.username
-    
-    try:
-    
-        user = authenticate(username=username_of_user, password=auth_data['password'])
-        if user:
-            user.objects.delete()
-            res = [{'key': 0, 'response': 'User deleted successfully!'}]
-        
-            return Response(data=res)
-        else:
-            res = [{'key': 0, 'response': 'Something seems wrong, please check your credentials.'}]
-        
-    except Exception as e:
-        res = [{'key': 0, 'response': e}]
-    
-    return Response(data=res)
-
-
 @login_required(login_url="/login")
 def create_company(request):
     if request.method == 'POST':
@@ -156,16 +138,29 @@ def create_company(request):
             # if vat:
                 company = form.save(commit=False)
                 company.owner = request.user
+                f = train_rag(url=company.policy_url, company_name=company.company_name)
                 company.save()
+                messages.success(request, f)
                 return redirect('Company dashboard', slug=company.company_link)
             # else:
-            #     messages.error(request, 'VAT ID is invalid')
+                # messages.error(request, 'VAT ID is invalid')
     else:
         form = CompanyForm()
 
     return render(request, 'main/companyForm.html', {"form": form})
 
 
+@login_required(login_url='/landing/')
 def company_dashboard(request, slug):
-    company = get_object_or_404(Company, company_link=slug)
-    return render(request, 'main/companyDashboard.html', {'code': company})
+    companies = Company.objects.filter(company_name=slug)
+    company = get_object_or_404(companies, company_link=slug)
+    return render(request, 'main/companyDashboard.html', {'company_name': company.company_name})
+
+# @csrf_exempt
+@api_view(['POST'])
+def chatModel(request):
+    res = request.data 
+    answer = load_ai(res["company_name"], res['form-prompt'])
+    response = [{'key': 0, 'answer': answer}] 
+    print(response)
+    return Response() # para: data=response

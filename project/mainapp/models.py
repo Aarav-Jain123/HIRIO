@@ -23,8 +23,9 @@ class Company(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     VAT_ID = models.CharField(max_length=200, editable=True)
     policy_url = models.URLField(max_length=200, editable=True)
+    # policy_rag_file = models.FileField(null=True, editable=True, upload_to='vectored_policy/', blank=True)
     linkedin_url = models.URLField(max_length=200, editable=True)
-    employee_list = models.FileField(editable=True, upload_to='employee_lists/', validators=[FileExtensionValidator(allowed_extensions=['csv', 'xlsx'])]) 
+    employee_list = models.FileField(editable=True, upload_to=f'employee_lists/{company_name}', validators=[FileExtensionValidator(allowed_extensions=['csv', 'xlsx'])]) 
     country_code = models.CharField(max_length=20, editable=True, default='-')
     company_link = AutoSlugField(populate_from='company_name', unique=True)
     

@@ -9,4 +9,5 @@ urlpatterns = [
     path('landing/', landing_page, name='Landing page'),
     path('company-create-form/', create_company, name='Company creation form'),
     path('company-dashboard/<slug:slug>/', company_dashboard, name='Company dashboard'),
+    path('chat-model/', chatModel, name='chat model')
 ]

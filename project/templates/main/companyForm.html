@@ -11,13 +11,11 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Actions
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="/company-create-form/">Create new company</a></li>
+            <li><a class="dropdown-item" href="/logoutt/">Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -30,13 +28,14 @@
 </nav>
 </header>
 
-<div class="container">
+<div class="container" id="content">
   <div class="text-center">
     <h1>Company form</h1>
   </div>
-<form method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data" id='form'>
   {% csrf_token %}{{form|crispy}}
-  <button type="submit" class="btn btn-success">Proceed</button>
+  <button type="submit" class="btn btn-success" id='submit-btn'>Proceed</button>
+  <p>As soon as you press proceed, HIRIO will start embedding your policies, don't quit</u></p>
   <p>*Employee list must contain <u>name, employee id, ID, email, phone of employee</u></p>
 </form>
 </div>

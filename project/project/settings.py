@@ -162,6 +162,7 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/'
 LOGOUT_REDIRECT_URL = '/login'
 
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 # CSRF_COOKIE_HTTPONLY = False 
 # CSRF_COOKIE_NAME = "csrftoken"
 
