@@ -91,7 +91,7 @@ def train_rag(url, company_name):
 load_dotenv()
 
 def load_ai(company_name, prompt_input):
-    llm = ChatGroq(api_key='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', model_name='llama3-8b-8192')
+    llm = ChatGroq(api_key='x', model_name='llama3-8b-8192')
     chain = create_doc_chain(llm, prompt_input, company_name, True)
     return chain
     
