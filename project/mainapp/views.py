@@ -134,16 +134,16 @@ def create_company(request):
     if request.method == 'POST':
         form = CompanyForm(request.POST, request.FILES)
         if form.is_valid():
-            # vat = verify_vat(country_code=form.data.get('country_code'), vat_number=form.data.get('country_code'))['valid']
-            # if vat:
+            vat = verify_vat(country_code=form.data.get('country_code'), vat_number=form.data.get('country_code'))['valid']
+            if vat:
                 company = form.save(commit=False)
                 company.owner = request.user
                 f = train_rag(url=company.policy_url, company_name=company.company_name)
                 company.save()
                 messages.success(request, f)
                 return redirect('Company dashboard', slug=company.company_link)
-            # else:
-                # messages.error(request, 'VAT ID is invalid')
+            else:
+                messages.error(request, 'VAT ID is invalid')
     else:
         form = CompanyForm()
 
